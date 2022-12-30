@@ -1,0 +1,469 @@
+[gd_scene load_steps=29 format=2]
+
+[ext_resource path="res://Styles/Ubuntu-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Login.gd" type="Script" id=3]
+[ext_resource path="res://cog.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/volume-high.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/volume-low.png" type="Texture" id=6]
+[ext_resource path="res://Styles/Asap-Regular.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://Styles/Blood Moon Diana _ Login Screen.ogv" type="VideoStream" id=8]
+
+[sub_resource type="StyleBoxEmpty" id=8]
+
+[sub_resource type="DynamicFont" id=3]
+size = 26
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=20]
+size = 20
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=21]
+bg_color = Color( 0, 0.0117647, 0.109804, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 0.517647, 0.384314, 0.0627451, 1 )
+border_blend = true
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="DynamicFont" id=16]
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+draw_center = false
+
+[sub_resource type="DynamicFont" id=6]
+size = 17
+use_filter = true
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=17]
+size = 21
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=18]
+bg_color = Color( 0.0156863, 0.0117647, 0.145098, 1 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.517647, 0.384314, 0.0627451, 1 )
+border_blend = true
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="DynamicFont" id=12]
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxEmpty" id=13]
+
+[sub_resource type="ImageTexture" id=15]
+
+[sub_resource type="StyleBoxEmpty" id=14]
+
+[sub_resource type="DynamicFont" id=7]
+size = 29
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0, 0, 0.0941176, 1 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.490196, 0.298039, 0, 0.988235 )
+border_blend = true
+
+[sub_resource type="Theme" id=2]
+default_font = SubResource( 17 )
+Button/fonts/font = SubResource( 20 )
+Button/styles/disabled = SubResource( 21 )
+Button/styles/focus = SubResource( 21 )
+Button/styles/hover = SubResource( 21 )
+Button/styles/normal = SubResource( 21 )
+Button/styles/pressed = SubResource( 21 )
+CheckBox/fonts/font = SubResource( 16 )
+CheckBox/styles/disabled = SubResource( 4 )
+CheckBox/styles/focus = SubResource( 4 )
+CheckBox/styles/hover = SubResource( 4 )
+CheckBox/styles/hover_pressed = SubResource( 4 )
+CheckBox/styles/normal = SubResource( 4 )
+CheckBox/styles/pressed = SubResource( 4 )
+Label/fonts/font = SubResource( 6 )
+LineEdit/fonts/font = SubResource( 17 )
+LineEdit/styles/focus = SubResource( 18 )
+LineEdit/styles/normal = SubResource( 18 )
+LineEdit/styles/read_only = SubResource( 18 )
+OptionButton/colors/font_color = Color( 0.866667, 0.615686, 0.223529, 0.988235 )
+OptionButton/colors/font_color_disabled = Color( 0.866667, 0.615686, 0.223529, 0.988235 )
+OptionButton/colors/font_color_focus = Color( 0.866667, 0.615686, 0.223529, 0.988235 )
+OptionButton/colors/font_color_hover = Color( 0.866667, 0.615686, 0.223529, 0.988235 )
+OptionButton/colors/font_color_pressed = Color( 0.866667, 0.615686, 0.223529, 0.988235 )
+OptionButton/constants/arrow_margin = 5
+OptionButton/fonts/font = SubResource( 12 )
+OptionButton/styles/disabled = SubResource( 13 )
+OptionButton/styles/focus = SubResource( 13 )
+OptionButton/styles/hover = SubResource( 13 )
+OptionButton/styles/normal = SubResource( 13 )
+OptionButton/styles/pressed = SubResource( 13 )
+PopupMenu/colors/font_color = Color( 0.866667, 0.615686, 0.223529, 0.988235 )
+PopupMenu/colors/font_color_accel = Color( 0.866667, 0.615686, 0.223529, 0.988235 )
+PopupMenu/colors/font_color_disabled = Color( 0.866667, 0.615686, 0.223529, 0.988235 )
+PopupMenu/colors/font_color_hover = Color( 0.866667, 0.615686, 0.223529, 0.988235 )
+PopupMenu/colors/font_color_separator = Color( 0.866667, 0.615686, 0.223529, 0.988235 )
+PopupMenu/fonts/font = SubResource( 12 )
+PopupMenu/icons/checked = SubResource( 15 )
+PopupMenu/icons/radio_checked = SubResource( 15 )
+PopupMenu/icons/radio_unchecked = SubResource( 15 )
+PopupMenu/icons/submenu = SubResource( 15 )
+PopupMenu/icons/unchecked = SubResource( 15 )
+PopupMenu/styles/hover = SubResource( 14 )
+PopupMenu/styles/labeled_separator_left = SubResource( 14 )
+PopupMenu/styles/labeled_separator_right = SubResource( 14 )
+PopupMenu/styles/panel = SubResource( 14 )
+PopupMenu/styles/panel_disabled = SubResource( 14 )
+PopupMenu/styles/separator = SubResource( 14 )
+TextEdit/fonts/font = SubResource( 7 )
+TextEdit/styles/completion = SubResource( 1 )
+TextEdit/styles/focus = SubResource( 1 )
+TextEdit/styles/normal = SubResource( 1 )
+TextEdit/styles/read_only = SubResource( 1 )
+
+[sub_resource type="StyleBoxEmpty" id=19]
+
+[sub_resource type="ButtonGroup" id=11]
+
+[sub_resource type="DynamicFont" id=5]
+size = 17
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxEmpty" id=9]
+
+[sub_resource type="StyleBoxEmpty" id=10]
+
+[node name="Login" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+margin_top = 2.0
+margin_right = -2.0
+margin_bottom = -2.0
+script = ExtResource( 3 )
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -2.0
+margin_top = -2.0
+margin_right = 2.0
+margin_bottom = 2.0
+color = Color( 0.490196, 0.298039, 0, 0.239216 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.12549, 0.129412, 0.207843, 1 )
+
+[node name="Image" type="Control" parent="."]
+anchor_bottom = 1.0
+margin_right = 1292.0
+
+[node name="VideoPlayer" type="VideoPlayer" parent="Image"]
+margin_right = 1287.0
+margin_bottom = 896.0
+stream = ExtResource( 8 )
+volume_db = -5.0
+autoplay = true
+
+[node name="CheckButton" type="CheckButton" parent="Image"]
+margin_left = 1167.0
+margin_top = 762.0
+margin_right = 1227.0
+margin_bottom = 818.0
+custom_icons/off = ExtResource( 5 )
+custom_icons/on_disabled = ExtResource( 5 )
+custom_icons/on = ExtResource( 6 )
+custom_icons/off_disabled = ExtResource( 6 )
+custom_styles/focus = SubResource( 8 )
+
+[node name="Login" type="Control" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -310.0
+
+[node name="LoginCont" type="Control" parent="Login"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -131.0
+margin_top = -286.0
+margin_right = 136.0
+margin_bottom = 20.0
+
+[node name="Label" type="Label" parent="Login/LoginCont"]
+margin_right = 267.0
+margin_bottom = 30.0
+custom_fonts/font = SubResource( 3 )
+text = "Sing In"
+
+[node name="LoginBox" type="VBoxContainer" parent="Login/LoginCont"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 31.0
+margin_bottom = 85.0
+theme = SubResource( 2 )
+
+[node name="VSplitContainer" type="VSplitContainer" parent="Login/LoginCont/LoginBox"]
+margin_right = 267.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 0, 50 )
+
+[node name="Usernamelbl" type="Label" parent="Login/LoginCont/LoginBox"]
+margin_top = 54.0
+margin_right = 267.0
+margin_bottom = 74.0
+text = "Username"
+
+[node name="Usertxt" type="LineEdit" parent="Login/LoginCont/LoginBox"]
+margin_top = 78.0
+margin_right = 267.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 0, 50 )
+middle_mouse_paste_enabled = false
+
+[node name="VSplitContainer2" type="VSplitContainer" parent="Login/LoginCont/LoginBox"]
+margin_top = 132.0
+margin_right = 267.0
+margin_bottom = 157.0
+rect_min_size = Vector2( 0, 25 )
+
+[node name="Passwordlbl" type="Label" parent="Login/LoginCont/LoginBox"]
+margin_top = 161.0
+margin_right = 267.0
+margin_bottom = 181.0
+text = "Password"
+
+[node name="Passtxt" type="LineEdit" parent="Login/LoginCont/LoginBox"]
+margin_top = 185.0
+margin_right = 267.0
+margin_bottom = 235.0
+rect_min_size = Vector2( 0, 50 )
+secret = true
+middle_mouse_paste_enabled = false
+deselect_on_focus_loss_enabled = false
+
+[node name="CheckBox" type="CheckBox" parent="Login/LoginCont/LoginBox"]
+margin_top = 239.0
+margin_right = 267.0
+margin_bottom = 258.0
+custom_styles/focus = SubResource( 19 )
+text = "Remember me"
+
+[node name="Label" type="Label" parent="Login/LoginCont/LoginBox"]
+margin_top = 262.0
+margin_right = 267.0
+margin_bottom = 282.0
+text = "Region/Language"
+
+[node name="Region" type="OptionButton" parent="Login/LoginCont/LoginBox"]
+margin_top = 286.0
+margin_right = 267.0
+margin_bottom = 305.0
+group = SubResource( 11 )
+text = "Brasil (Português)"
+
+[node name="VSplitContainer3" type="VSplitContainer" parent="Login/LoginCont/LoginBox"]
+margin_top = 309.0
+margin_right = 267.0
+margin_bottom = 509.0
+rect_min_size = Vector2( 0, 200 )
+
+[node name="Login" type="Button" parent="Login/LoginCont/LoginBox"]
+margin_top = 513.0
+margin_right = 267.0
+margin_bottom = 544.0
+text = "Login"
+
+[node name="Register" type="Button" parent="Login/LoginCont/LoginBox"]
+margin_top = 548.0
+margin_right = 267.0
+margin_bottom = 579.0
+text = "Register"
+
+[node name="RegisterBox" type="VBoxContainer" parent="Login/LoginCont"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 31.0
+margin_bottom = 85.0
+theme = SubResource( 2 )
+
+[node name="VSplitContainer" type="VSplitContainer" parent="Login/LoginCont/RegisterBox"]
+margin_right = 267.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 0, 50 )
+
+[node name="Usernamelbl" type="Label" parent="Login/LoginCont/RegisterBox"]
+margin_top = 54.0
+margin_right = 267.0
+margin_bottom = 74.0
+text = "Username"
+
+[node name="Usertxt" type="LineEdit" parent="Login/LoginCont/RegisterBox"]
+margin_top = 78.0
+margin_right = 267.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 0, 50 )
+middle_mouse_paste_enabled = false
+
+[node name="VSplitContainer2" type="VSplitContainer" parent="Login/LoginCont/RegisterBox"]
+margin_top = 132.0
+margin_right = 267.0
+margin_bottom = 157.0
+rect_min_size = Vector2( 0, 25 )
+
+[node name="Emailtxt2" type="Label" parent="Login/LoginCont/RegisterBox"]
+margin_top = 161.0
+margin_right = 267.0
+margin_bottom = 181.0
+text = "Email"
+
+[node name="Emailtxt" type="LineEdit" parent="Login/LoginCont/RegisterBox"]
+margin_top = 185.0
+margin_right = 267.0
+margin_bottom = 235.0
+rect_min_size = Vector2( 0, 50 )
+middle_mouse_paste_enabled = false
+
+[node name="VSplitContainer4" type="VSplitContainer" parent="Login/LoginCont/RegisterBox"]
+margin_top = 239.0
+margin_right = 267.0
+margin_bottom = 264.0
+rect_min_size = Vector2( 0, 25 )
+
+[node name="Passwordlbl" type="Label" parent="Login/LoginCont/RegisterBox"]
+margin_top = 268.0
+margin_right = 267.0
+margin_bottom = 288.0
+text = "Password"
+
+[node name="Passtxt" type="LineEdit" parent="Login/LoginCont/RegisterBox"]
+margin_top = 292.0
+margin_right = 267.0
+margin_bottom = 342.0
+rect_min_size = Vector2( 0, 50 )
+secret = true
+middle_mouse_paste_enabled = false
+deselect_on_focus_loss_enabled = false
+
+[node name="CheckBox" type="CheckBox" parent="Login/LoginCont/RegisterBox"]
+margin_top = 346.0
+margin_right = 267.0
+margin_bottom = 365.0
+custom_styles/focus = SubResource( 19 )
+text = "Remember me"
+
+[node name="Label" type="Label" parent="Login/LoginCont/RegisterBox"]
+margin_top = 369.0
+margin_right = 267.0
+margin_bottom = 389.0
+text = "Region/Language"
+
+[node name="Region" type="OptionButton" parent="Login/LoginCont/RegisterBox"]
+margin_top = 393.0
+margin_right = 267.0
+margin_bottom = 412.0
+group = SubResource( 11 )
+
+[node name="VSplitContainer3" type="VSplitContainer" parent="Login/LoginCont/RegisterBox"]
+margin_top = 416.0
+margin_right = 267.0
+margin_bottom = 516.0
+rect_min_size = Vector2( 0, 100 )
+
+[node name="Login" type="Button" parent="Login/LoginCont/RegisterBox"]
+margin_top = 520.0
+margin_right = 267.0
+margin_bottom = 551.0
+text = "Login"
+
+[node name="Register" type="Button" parent="Login/LoginCont/RegisterBox"]
+margin_top = 555.0
+margin_right = 267.0
+margin_bottom = 586.0
+text = "Register"
+
+[node name="TopMenu" type="HBoxContainer" parent="."]
+margin_left = 1479.0
+margin_top = 1.0
+margin_right = 1589.0
+margin_bottom = 31.0
+
+[node name="Interrogation" type="Button" parent="TopMenu"]
+modulate = Color( 0.862745, 0.588235, 0.156863, 1 )
+margin_right = 19.0
+margin_bottom = 30.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 5 )
+custom_styles/focus = SubResource( 9 )
+text = "?"
+flat = true
+
+[node name="Minimize" type="Button" parent="TopMenu"]
+modulate = Color( 0.862745, 0.588235, 0.156863, 1 )
+margin_left = 23.0
+margin_right = 43.0
+margin_bottom = 30.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 5 )
+custom_styles/focus = SubResource( 10 )
+text = "_"
+flat = true
+
+[node name="Settings" type="Button" parent="TopMenu"]
+modulate = Color( 0.862745, 0.588235, 0.156863, 1 )
+margin_left = 47.0
+margin_right = 83.0
+margin_bottom = 30.0
+custom_colors/font_color = Color( 0.862745, 0.588235, 0.156863, 1 )
+custom_styles/focus = SubResource( 10 )
+icon = ExtResource( 4 )
+flat = true
+
+[node name="Exit" type="Button" parent="TopMenu"]
+modulate = Color( 0.862745, 0.588235, 0.156863, 1 )
+margin_left = 87.0
+margin_right = 110.0
+margin_bottom = 30.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 5 )
+custom_styles/focus = SubResource( 10 )
+text = "X"
+flat = true
+
+[node name="Control" type="Control" parent="."]
+anchor_right = 1.0
+margin_right = -124.0
+margin_bottom = 37.0
+
+[connection signal="toggled" from="Image/CheckButton" to="." method="_on_CheckButton_toggled"]
+[connection signal="pressed" from="Login/LoginCont/LoginBox/Login" to="." method="_on_Login_pressed"]
+[connection signal="pressed" from="TopMenu/Minimize" to="." method="_on_Minimize_pressed"]
+[connection signal="pressed" from="TopMenu/Exit" to="." method="_on_Exit_pressed"]
+[connection signal="gui_input" from="Control" to="." method="_on_Control_gui_input"]

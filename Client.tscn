@@ -1,0 +1,521 @@
+[gd_scene load_steps=29 format=2]
+
+[ext_resource path="res://Client.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/BordaIcon.png" type="Texture" id=2]
+[ext_resource path="res://Friend.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Styles/Ubuntu-Regular.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://cog.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/bug-outline.png" type="Texture" id=6]
+[ext_resource path="res://Styles/ClientText.tres" type="DynamicFont" id=7]
+[ext_resource path="res://Sprites/cards-diamond.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/currency-usd.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/magnify.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/drag-horizontal-variant.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/file-plus.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/account-plus.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/microphone.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/file.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/hammer-wrench (1).png" type="Texture" id=16]
+[ext_resource path="res://Sprites/account (1).png" type="Texture" id=17]
+[ext_resource path="res://Sprites/bag-personal (1).png" type="Texture" id=18]
+[ext_resource path="res://Sprites/cart (1).png" type="Texture" id=19]
+[ext_resource path="res://Sprites/ButtonPlay.png" type="Texture" id=20]
+[ext_resource path="res://Sprites/comment-text.png" type="Texture" id=21]
+[ext_resource path="res://MainScreen.tscn" type="PackedScene" id=22]
+
+[sub_resource type="StyleBoxFlat" id=3]
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="Theme" id=2]
+Button/styles/disabled = SubResource( 3 )
+Button/styles/focus = SubResource( 3 )
+Button/styles/hover = SubResource( 3 )
+Button/styles/normal = SubResource( 3 )
+Button/styles/pressed = SubResource( 3 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+content_margin_left = 8.0
+content_margin_right = 7.0
+content_margin_top = 1.0
+content_margin_bottom = 1.0
+bg_color = Color( 0.223529, 0.227451, 0.337255, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.898039, 0.415686, 0.027451, 1 )
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+shadow_size = 1
+shadow_offset = Vector2( 1, 0 )
+anti_aliasing_size = 0.3
+
+[sub_resource type="Theme" id=5]
+Button/styles/disabled = SubResource( 4 )
+Button/styles/focus = SubResource( 4 )
+Button/styles/hover = SubResource( 4 )
+Button/styles/normal = SubResource( 4 )
+Button/styles/pressed = SubResource( 4 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.898039, 0.415686, 0.027451, 0 )
+draw_center = false
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.898039, 0.415686, 0.027451, 0 )
+shadow_color = Color( 0.898039, 0.415686, 0.027451, 1 )
+shadow_size = 2
+
+[sub_resource type="DynamicFont" id=6]
+size = 17
+use_filter = true
+font_data = ExtResource( 4 )
+
+[node name="Client" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+margin_top = 2.0
+margin_right = -2.0
+margin_bottom = -2.0
+script = ExtResource( 1 )
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -2.0
+margin_top = -2.0
+margin_right = 2.0
+margin_bottom = 2.0
+color = Color( 0.490196, 0.298039, 0, 0.239216 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.0117647, 0.0156863, 0.0745098, 1 )
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+anchor_right = 1.0
+margin_bottom = 1.0
+color = Color( 0.933333, 0.568627, 0.054902, 1 )
+
+[node name="MainScreen" type="Control" parent="."]
+margin_top = 88.0
+margin_right = 1354.0
+margin_bottom = 896.0
+
+[node name="Main" parent="MainScreen" instance=ExtResource( 22 )]
+
+[node name="SideBar" type="Control" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -242.0
+margin_top = 16.0
+
+[node name="ColorRect" type="ColorRect" parent="SideBar"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -15.0
+color = Color( 0.12549, 0.129412, 0.207843, 1 )
+
+[node name="Cima" type="Control" parent="SideBar"]
+anchor_right = 1.0
+margin_top = -8.0
+margin_bottom = 58.0
+
+[node name="Icone" type="TextureButton" parent="SideBar/Cima"]
+margin_left = 2.0
+margin_right = 602.0
+margin_bottom = 600.0
+rect_scale = Vector2( 0.09, 0.09 )
+texture_normal = ExtResource( 2 )
+
+[node name="Statuslbl" type="Label" parent="SideBar/Cima"]
+margin_left = 83.0
+margin_top = 39.0
+margin_right = 123.0
+margin_bottom = 53.0
+text = "Status"
+
+[node name="Statusbtn" type="Button" parent="SideBar/Cima"]
+margin_left = 66.0
+margin_top = 37.0
+margin_right = 83.0
+margin_bottom = 55.0
+rect_scale = Vector2( 0.8, 0.8 )
+theme = SubResource( 2 )
+
+[node name="Levellbl" type="Label" parent="SideBar/Cima"]
+margin_left = 156.0
+margin_top = 11.0
+margin_right = 196.0
+margin_bottom = 25.0
+
+[node name="Namelbl" type="Label" parent="SideBar/Cima"]
+margin_left = 67.0
+margin_top = 12.0
+margin_right = 107.0
+margin_bottom = 26.0
+text = "Name"
+
+[node name="Amigos" type="Control" parent="SideBar"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -809.0
+
+[node name="TopMenu" type="Control" parent="SideBar/Amigos"]
+anchor_right = 1.0
+margin_top = 2.0
+margin_bottom = 31.0
+
+[node name="ColorRect" type="ColorRect" parent="SideBar/Amigos/TopMenu"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Social" type="Label" parent="SideBar/Amigos/TopMenu"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 6.0
+margin_top = -12.5
+margin_right = 47.0
+margin_bottom = 6.5
+custom_fonts/font = ExtResource( 7 )
+text = "Social"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SideBar/Amigos/TopMenu"]
+anchor_left = 0.471
+anchor_right = 1.116
+anchor_bottom = 1.5
+margin_left = 18.018
+margin_right = -30.072
+margin_bottom = -19.5
+alignment = 2
+
+[node name="TextureButton" type="TextureButton" parent="SideBar/Amigos/TopMenu/HBoxContainer"]
+modulate = Color( 0.862745, 0.588235, 0.156863, 1 )
+margin_right = 24.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 13 )
+
+[node name="TextureButton2" type="TextureButton" parent="SideBar/Amigos/TopMenu/HBoxContainer"]
+modulate = Color( 0.862745, 0.588235, 0.156863, 1 )
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 12 )
+
+[node name="TextureButton3" type="TextureButton" parent="SideBar/Amigos/TopMenu/HBoxContainer"]
+modulate = Color( 0.862745, 0.588235, 0.156863, 1 )
+margin_left = 56.0
+margin_right = 80.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 11 )
+
+[node name="TextureButton4" type="TextureButton" parent="SideBar/Amigos/TopMenu/HBoxContainer"]
+modulate = Color( 0.862745, 0.588235, 0.156863, 1 )
+margin_left = 84.0
+margin_right = 108.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 10 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SideBar/Amigos"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 28.0
+margin_bottom = -41.0
+
+[node name="Friend" parent="SideBar/Amigos/VBoxContainer" instance=ExtResource( 3 )]
+margin_right = 242.0
+
+[node name="Friend2" parent="SideBar/Amigos/VBoxContainer" instance=ExtResource( 3 )]
+margin_top = 62.0
+margin_right = 242.0
+margin_bottom = 120.0
+
+[node name="Friend3" parent="SideBar/Amigos/VBoxContainer" instance=ExtResource( 3 )]
+margin_top = 124.0
+margin_right = 242.0
+margin_bottom = 182.0
+
+[node name="Friend4" parent="SideBar/Amigos/VBoxContainer" instance=ExtResource( 3 )]
+margin_top = 186.0
+margin_right = 242.0
+margin_bottom = 244.0
+
+[node name="Friend5" parent="SideBar/Amigos/VBoxContainer" instance=ExtResource( 3 )]
+margin_top = 248.0
+margin_right = 242.0
+margin_bottom = 306.0
+
+[node name="Friend6" parent="SideBar/Amigos/VBoxContainer" instance=ExtResource( 3 )]
+margin_top = 310.0
+margin_right = 242.0
+margin_bottom = 368.0
+
+[node name="BottomMenu" type="Control" parent="SideBar/Amigos"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1.0
+margin_top = -30.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SideBar/Amigos/BottomMenu"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -3.0
+margin_right = -1.0
+margin_bottom = -1.0
+theme = SubResource( 5 )
+
+[node name="Chat" type="Button" parent="SideBar/Amigos/BottomMenu/HBoxContainer"]
+margin_right = 39.0
+margin_bottom = 32.0
+icon = ExtResource( 21 )
+
+[node name="Missions" type="Button" parent="SideBar/Amigos/BottomMenu/HBoxContainer"]
+margin_left = 43.0
+margin_right = 82.0
+margin_bottom = 32.0
+icon = ExtResource( 15 )
+
+[node name="Voice" type="Button" parent="SideBar/Amigos/BottomMenu/HBoxContainer"]
+margin_left = 86.0
+margin_right = 125.0
+margin_bottom = 32.0
+icon = ExtResource( 14 )
+
+[node name="Version" type="Label" parent="SideBar/Amigos/BottomMenu/HBoxContainer"]
+margin_left = 129.0
+margin_top = 5.0
+margin_right = 197.167
+margin_bottom = 26.0
+rect_min_size = Vector2( 68.167, 0 )
+custom_fonts/font = ExtResource( 7 )
+text = "V 0.1"
+align = 1
+valign = 1
+
+[node name="Bugs" type="Button" parent="SideBar/Amigos/BottomMenu/HBoxContainer"]
+margin_left = 201.0
+margin_right = 240.0
+margin_bottom = 32.0
+icon = ExtResource( 6 )
+
+[node name="TopBar" type="Control" parent="."]
+anchor_right = 1.0
+margin_left = 12.0
+margin_top = 4.0
+margin_right = -242.0
+margin_bottom = 87.0
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="TopBar"]
+anchor_left = 0.139
+anchor_right = 0.327
+anchor_bottom = 1.0
+margin_left = 0.461975
+margin_right = 0.165985
+
+[node name="Button" type="Button" parent="TopBar/HBoxContainer2"]
+modulate = Color( 0.862745, 0.588235, 0.156863, 1 )
+margin_right = 65.0
+margin_bottom = 83.0
+custom_fonts/font = ExtResource( 7 )
+text = "HOME"
+flat = true
+
+[node name="Button2" type="Button" parent="TopBar/HBoxContainer2"]
+modulate = Color( 0.862745, 0.588235, 0.156863, 1 )
+margin_left = 69.0
+margin_right = 148.0
+margin_bottom = 83.0
+custom_fonts/font = ExtResource( 7 )
+text = "TFTexto"
+flat = true
+
+[node name="TextureButton" type="TextureButton" parent="TopBar"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 34.0
+margin_top = -18.5
+margin_right = 634.0
+margin_bottom = 181.5
+rect_scale = Vector2( 0.2, 0.2 )
+texture_normal = ExtResource( 20 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TopBar"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -329.0
+margin_right = -125.0
+alignment = 2
+
+[node name="Button" type="Button" parent="TopBar/HBoxContainer"]
+modulate = Color( 0.862745, 0.588235, 0.156863, 1 )
+margin_right = 48.0
+margin_bottom = 83.0
+icon = ExtResource( 17 )
+flat = true
+icon_align = 1
+
+[node name="Button3" type="Button" parent="TopBar/HBoxContainer"]
+modulate = Color( 0.862745, 0.588235, 0.156863, 1 )
+margin_left = 52.0
+margin_right = 100.0
+margin_bottom = 83.0
+icon = ExtResource( 18 )
+flat = true
+icon_align = 1
+
+[node name="Button2" type="Button" parent="TopBar/HBoxContainer"]
+modulate = Color( 0.862745, 0.588235, 0.156863, 1 )
+margin_left = 104.0
+margin_right = 152.0
+margin_bottom = 83.0
+icon = ExtResource( 16 )
+flat = true
+icon_align = 1
+
+[node name="Button4" type="Button" parent="TopBar/HBoxContainer"]
+modulate = Color( 0.862745, 0.588235, 0.156863, 1 )
+margin_left = 156.0
+margin_right = 204.0
+margin_bottom = 83.0
+icon = ExtResource( 19 )
+flat = true
+icon_align = 1
+
+[node name="Money" type="Control" parent="TopBar"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -123.0
+margin_top = -28.5
+margin_bottom = 30.5
+
+[node name="ColorRect" type="Panel" parent="TopBar/Money"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -28.0
+margin_right = 0.01
+margin_bottom = 22.0
+custom_styles/panel = SubResource( 7 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TopBar/Money"]
+margin_left = 6.0
+margin_top = 4.0
+margin_right = 121.0
+margin_bottom = 56.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TopBar/Money/VBoxContainer"]
+margin_right = 115.0
+margin_bottom = 24.0
+
+[node name="TextureRect" type="TextureRect" parent="TopBar/Money/VBoxContainer/HBoxContainer"]
+modulate = Color( 0.258824, 0.529412, 1, 1 )
+margin_right = 24.0
+margin_bottom = 24.0
+texture = ExtResource( 8 )
+
+[node name="Diamondlbl" type="Label" parent="TopBar/Money/VBoxContainer/HBoxContainer"]
+margin_left = 28.0
+margin_top = 1.0
+margin_right = 38.0
+margin_bottom = 22.0
+custom_fonts/font = ExtResource( 7 )
+text = "0"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="TopBar/Money/VBoxContainer"]
+margin_top = 28.0
+margin_right = 115.0
+margin_bottom = 52.0
+
+[node name="TextureRect2" type="TextureRect" parent="TopBar/Money/VBoxContainer/HBoxContainer2"]
+modulate = Color( 0.968627, 0.960784, 0.376471, 1 )
+margin_right = 24.0
+margin_bottom = 24.0
+texture = ExtResource( 9 )
+
+[node name="Moneylbl" type="Label" parent="TopBar/Money/VBoxContainer/HBoxContainer2"]
+margin_left = 28.0
+margin_top = 1.0
+margin_right = 38.0
+margin_bottom = 22.0
+custom_fonts/font = ExtResource( 7 )
+text = "0"
+
+[node name="TopMenu" type="HBoxContainer" parent="."]
+margin_left = 1479.0
+margin_top = 1.0
+margin_right = 1589.0
+margin_bottom = 31.0
+
+[node name="Interrogation" type="Button" parent="TopMenu"]
+modulate = Color( 0.862745, 0.588235, 0.156863, 1 )
+margin_right = 19.0
+margin_bottom = 30.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 6 )
+text = "?"
+flat = true
+
+[node name="Minimize" type="Button" parent="TopMenu"]
+modulate = Color( 0.862745, 0.588235, 0.156863, 1 )
+margin_left = 23.0
+margin_right = 43.0
+margin_bottom = 30.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 6 )
+text = "_"
+flat = true
+
+[node name="Settings" type="Button" parent="TopMenu"]
+modulate = Color( 0.862745, 0.588235, 0.156863, 1 )
+margin_left = 47.0
+margin_right = 83.0
+margin_bottom = 30.0
+custom_colors/font_color = Color( 0.862745, 0.588235, 0.156863, 1 )
+icon = ExtResource( 5 )
+flat = true
+
+[node name="Exit" type="Button" parent="TopMenu"]
+modulate = Color( 0.862745, 0.588235, 0.156863, 1 )
+margin_left = 87.0
+margin_right = 110.0
+margin_bottom = 30.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 6 )
+text = "X"
+flat = true
+
+[node name="ColorRect5" type="Panel" parent="."]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 3.0
+margin_top = -361.0
+margin_right = 1589.0
+margin_bottom = -360.99
+custom_styles/panel = SubResource( 7 )
+
+[node name="Control" type="Control" parent="."]
+anchor_right = 1.0
+margin_right = -245.0
+margin_bottom = 28.0
+
+[connection signal="pressed" from="TopMenu/Exit" to="." method="_on_Button_pressed"]
+[connection signal="gui_input" from="Control" to="." method="_on_Control_gui_input"]

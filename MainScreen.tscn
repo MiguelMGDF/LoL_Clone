@@ -1,0 +1,178 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Sprites/Background LOL.png" type="Texture" id=1]
+[ext_resource path="res://Videos/SionDives.ogv" type="VideoStream" id=2]
+[ext_resource path="res://MainScreen.gd" type="Script" id=3]
+[ext_resource path="res://Sprites/volume-low.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/volume-high.png" type="Texture" id=5]
+[ext_resource path="res://Styles/Ubuntu-Regular.ttf" type="DynamicFontData" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 28
+use_filter = true
+font_data = ExtResource( 6 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.282353, 0.282353, 0.282353, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.517647, 0.384314, 0.0627451, 1 )
+shadow_size = 3
+shadow_offset = Vector2( 1, 0 )
+
+[sub_resource type="Theme" id=3]
+Button/colors/font_color = Color( 0.866667, 0.611765, 0, 1 )
+Button/fonts/font = SubResource( 1 )
+Button/styles/disabled = SubResource( 2 )
+Button/styles/focus = SubResource( 2 )
+Button/styles/hover = SubResource( 2 )
+Button/styles/normal = SubResource( 2 )
+Button/styles/pressed = SubResource( 2 )
+
+[node name="Main" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+
+[node name="Background" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+expand = true
+
+[node name="ColorRect" type="ColorRect" parent="Background"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.466667 )
+
+[node name="Display" type="Control" parent="."]
+margin_left = -2.0
+margin_top = 3.0
+margin_right = 901.0
+margin_bottom = 712.0
+
+[node name="VideoDemo" type="VideoPlayer" parent="Display"]
+margin_left = 102.0
+margin_top = 126.0
+margin_right = 798.0
+margin_bottom = 527.0
+stream = ExtResource( 2 )
+autoplay = true
+
+[node name="Borda1" type="ColorRect" parent="Display/VideoDemo"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -2.0
+rect_min_size = Vector2( 3, 3 )
+color = Color( 0.933333, 0.568627, 0.054902, 1 )
+
+[node name="Borda2" type="ColorRect" parent="Display/VideoDemo"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 3, 3 )
+color = Color( 0.933333, 0.568627, 0.054902, 1 )
+
+[node name="Borda3" type="ColorRect" parent="Display/VideoDemo"]
+anchor_bottom = 1.0
+rect_min_size = Vector2( 3, 3 )
+color = Color( 0.933333, 0.568627, 0.054902, 1 )
+
+[node name="Borda4" type="ColorRect" parent="Display/VideoDemo"]
+anchor_right = 1.0
+margin_bottom = 1.0
+rect_min_size = Vector2( 3, 3 )
+color = Color( 0.933333, 0.568627, 0.054902, 1 )
+
+[node name="CheckButton" type="CheckButton" parent="Display/VideoDemo"]
+margin_left = 598.0
+margin_top = 332.0
+margin_right = 658.0
+margin_bottom = 388.0
+custom_icons/off = ExtResource( 4 )
+custom_icons/on_disabled = ExtResource( 5 )
+custom_icons/on = ExtResource( 5 )
+custom_icons/off_disabled = ExtResource( 4 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Display"]
+anchor_left = 0.396
+anchor_top = 0.797
+anchor_right = 0.887
+anchor_bottom = 0.896
+margin_left = 0.411987
+margin_top = -0.0730591
+margin_right = 0.0390015
+margin_bottom = -2.26404
+theme = SubResource( 3 )
+alignment = 2
+
+[node name="P" type="Button" parent="Display/HBoxContainer"]
+margin_left = 77.0
+margin_right = 147.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 70, 70 )
+toggle_mode = true
+text = "P"
+icon_align = 1
+
+[node name="Q" type="Button" parent="Display/HBoxContainer"]
+margin_left = 151.0
+margin_right = 221.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 70, 70 )
+toggle_mode = true
+text = "Q"
+icon_align = 1
+
+[node name="W" type="Button" parent="Display/HBoxContainer"]
+margin_left = 225.0
+margin_right = 295.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 70, 70 )
+toggle_mode = true
+text = "W"
+icon_align = 1
+
+[node name="E" type="Button" parent="Display/HBoxContainer"]
+margin_left = 299.0
+margin_right = 369.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 70, 70 )
+toggle_mode = true
+text = "E"
+icon_align = 1
+
+[node name="R" type="Button" parent="Display/HBoxContainer"]
+margin_left = 373.0
+margin_right = 443.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 70, 70 )
+toggle_mode = true
+text = "R"
+icon_align = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Display"]
+margin_left = 101.0
+margin_top = 565.0
+margin_right = 375.0
+margin_bottom = 633.0
+
+[node name="Button" type="Button" parent="Display/HBoxContainer2"]
+margin_right = 12.0
+margin_bottom = 68.0
+icon_align = 1
+
+[node name="Label" type="Label" parent="Display/HBoxContainer2"]
+margin_left = 16.0
+margin_top = 27.0
+margin_right = 16.0
+margin_bottom = 41.0
+
+[node name="TopMenu" type="Control" parent="."]
+anchor_right = 1.0
+margin_bottom = 68.0
+
+[connection signal="toggled" from="Display/VideoDemo/CheckButton" to="." method="_on_CheckButton_toggled"]
